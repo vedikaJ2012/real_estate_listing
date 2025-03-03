@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 type MenuIconProps ={
@@ -38,6 +39,8 @@ const MenuIcon = ({title,path,navigate}:MenuIconProps)=>{
 const Navbar = () => {
 
   const navigate = useNavigate()
+  const [searchValue, setSearchValue] = useState("search here");
+
   return (
     <div className="flex bg-blue-900 justify-between">
       <div className="flex">
@@ -51,8 +54,10 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-      <div>
-        search bar
+      <div >
+          <label>
+            <input  name="myInput"  defaultValue="Search Bar" className='text-white' onChange={e =>{setSearchValue(e.target.value)}}/>
+          </label>
       </div>
     </div>
   )
