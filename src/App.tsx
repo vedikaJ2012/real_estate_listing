@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './components/Home'
+import PropertyDetails from './components/PropertyDetails'
 
 
 function App() {
@@ -36,7 +37,16 @@ function App() {
                         </Layout>
                       }
               >
-        </Route>     
+        </Route>
+        <Route
+           path="/property/:id" 
+              element={
+                        <Layout>
+                          <PropertyDetails />
+                        </Layout>
+                      }
+              >
+        </Route>      
       </Routes>
       </BrowserRouter>
     
