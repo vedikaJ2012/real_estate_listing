@@ -1,25 +1,26 @@
 import {useParams} from "react-router-dom";
-type propDet={
-    total:string,
-    availble:string,
-    area:string,
+export type PropertyDetails={
+    total:number,
+    availble:number,
+    area:number,
     price:number,
-    
 }
 
 
-type Property ={
-    title:String,
-    Developer:string,
-    Address:string,
-    Tags :Array<string>,
-    image:Array<string>,
+export type Property ={
+    id:number,
+    title:string,
+    developer:string,
+    address:string,
+    tags :string[],
+    image:string[],
     videpPresentation:string,
     locality:string,
     projectAt:string,
     constructionStage:string,
-    propDet:propDet[],
-  }
+    propertyDetails:PropertyDetails[],
+    ammenties:string[],
+}
 
 const PropertyDetails = () => {
     
