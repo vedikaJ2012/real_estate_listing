@@ -1,16 +1,20 @@
-import React from 'react'
-import location from './assets/location.jpeg'
 
+type CardProps ={
+  id:number,
+  image:string,
+  text:string,
+  address:string
+}
 
-const Cards = (props) => {
+const Cards = ({image,text,address}:CardProps) => {
   return (
     <div>
-        <img id='propertyImg' src={props.image} alt='image' className='w-100 h-100'></img>
-        <div id='propSummary' className='font-semibold'>{props.text}</div>
+        <img src={image} alt='image' className='w-100 h-50'></img>
+        <div className='font-semibold'>{text}</div>
         <div className='flex'>
-            <p id='add' className='font-light'>{props.address}</p>
+            <p className='font-light'>{address}</p>
         </div>
-        <button id='detailsButt' className='bg-blue-500 rounded-md text-white w-20 h-10 mt-5'>Details</button>
+        <button className='bg-blue-500 rounded-md text-white w-20 h-10 mt-5 cursor-pointer hover:opacity-80'>Details</button>
     </div>
   )
 }

@@ -55,9 +55,9 @@ const Navbar = () => {
         ))}
       </div>
       <div >
-          <label>
-            <input  name="myInput"  defaultValue="Search Bar" className='text-white' onChange={e =>{setSearchValue(e.target.value)}}/>
-          </label>
+          
+          <input  name="myInput"  placeholder="search bar" defaultValue="" className='text-white' onChange={e =>{setSearchValue(e.target.value)}}/>
+          
       </div>
     </div>
   )
