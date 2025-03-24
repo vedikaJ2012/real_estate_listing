@@ -216,7 +216,7 @@ const PropertyDetails = () => {
           </h2>
           <div className="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg flex items-center justify-center">
             <p className="text-gray-500">Video: {property.videpPresentation}</p>
-            {/* If you want to embed the video, you can use an iframe here */}
+           
           </div>
         </div>
       )}
